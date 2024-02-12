@@ -5,6 +5,11 @@ let input = document.getElementById('lettre');
 
 button.addEventListener('click',afficher);
 
+input.addEventListener('keyup',()=>{
+    if(input.value.length!=1){button.disabled=true;}
+    else{button.disabled=false;}
+})
+
 function afficher (){
     let toRemove = document.querySelectorAll('.box');
     if(input.value){
@@ -17,10 +22,12 @@ function afficher (){
                 resFiltered=resTot.filter(res=>res.name.common.charAt(0)==input.value.toUpperCase());
                 for(i=0;i<resFiltered.length;i++){
                 let box=document.createElement('div');
-                box.classList.add('col-4');
+                box.classList.add('col-3');
                 box.classList.add('box');
                 box.classList.add('text-center');
                 box.classList.add('mx-auto');
+                box.classList.add('ms-3');
+                box.classList.add('me-3');
                 let card = document.createElement('div');
                 let body = document.createElement('div');
                 let weather=document.createElement('p');
