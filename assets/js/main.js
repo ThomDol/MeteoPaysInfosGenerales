@@ -10,12 +10,12 @@ input.addEventListener('keyup',()=>{
     else{button.disabled=false;}
 })
 
-function afficher (){
+async function afficher (){
     let toRemove = document.querySelectorAll('.box');
     if(input.value){
         
         toRemove.forEach(element=>{element.remove();});
-        fetch(url).then(response=>{
+        await fetch(url).then(response=>{
             return response.json();})
             .then(data=>{
                 let resTot=data;
