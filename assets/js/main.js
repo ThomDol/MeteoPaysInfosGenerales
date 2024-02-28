@@ -3,7 +3,14 @@ let url = "https://restcountries.com/v3.1/all";
 let button = document.getElementById('button');
 let input = document.getElementById('lettre');
 
-input.addEventListener('keyup', afficher);
+button.addEventListener('click', afficher);
+
+input.addEventListener('keyup', () => {
+    if (input.value.length <= 1) {
+        button.disabled = false;
+    }
+    else { button.disabled = true; }
+});
 
 
 async function afficher() {
