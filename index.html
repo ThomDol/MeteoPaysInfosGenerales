@@ -22,9 +22,12 @@
         <div class="col-4 mx-auto text-center">
         <div class="mb-3">
             <label for="lettre" class="form-label"><strong class="text-primary">Entrez 1ere lettre du pays</strong></label>
-            <input type="text" class="form-control" id="lettre" aria-describedby="lettreHelp">
-            <div id="lettreHelp" class="form-text test-primary">Une seule lettre</div>
-            <div id="button" class="btn btn-warning">Validez</div>
+            <div class="row">
+                <input type="text" class="form-control" id="lettre" aria-describedby="lettreHelp"><span id="message"></span>
+            </div>
+            
+            <br>
+            <button id="button" class="btn btn-warning">Validez</button>
         </div>
     
         

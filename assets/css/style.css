@@ -1,45 +1,48 @@
-.map{
-    height: 180px;
+.map {
+  height: 180px;
 }
 
-.image{
-    width:30px;
-    height:20px;
+.image {
+  width: 30px;
+  height: 20px;
 }
 
-.box{
-    margin-bottom: 20px;
-    margin-left:10px;
-    margin-right:10px;
-    border:1px solid black;
-    border-radius: 10px;
-    padding-bottom: 10px;
-    background-color: rgba(121, 216, 161,0.1);
-    
+.box {
+  margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding-bottom: 10px;
+  background-color: rgba(121, 216, 161, 0.1);
 }
 
 #video-background {
-    position:fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    width: 100vh;
-    height: 100vh;
-    z-index: -100;
-    background-size:cover;
-    transition: 1s opacity;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: 100vh;
+  height: 100vh;
+  z-index: -100;
+  background-size: cover;
+  transition: 1s opacity;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: rgb(24, 14, 3);
+  font-family: Arial, sans-serif;
+  background-color: rgb(24, 14, 3);
 }
 
-p,h1{
-color:white;
-font-weight: bold;
-opacity: 1;
+p,
+h1 {
+  color: white;
+  font-weight: bold;
+  opacity: 1;
 }
 
-
+#message {
+  color: red;
+  font-weight: bold;
+}

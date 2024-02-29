@@ -3,13 +3,18 @@ let url = "https://restcountries.com/v3.1/all";
 let button = document.getElementById('button');
 let input = document.getElementById('lettre');
 
+
 button.addEventListener('click', afficher);
 
 input.addEventListener('keyup', () => {
     if (input.value.length <= 1) {
         button.disabled = false;
+        document.getElementById('message').textContent = "";
     }
-    else { button.disabled = true; }
+    else {
+        button.disabled = true;
+        document.getElementById('message').textContent = "Seulement la 1ere lettre";
+    }
 });
 
 
@@ -23,7 +28,7 @@ async function afficher() {
         })
             .then(data => {
                 let resTot = data;
-                resFiltered = resTot.filter(res => capitalizeFirstLetter(res.name.common).includes(capitalizeFirstLetter(input.value)));
+                resFiltered = resTot.filter(res => res.name.common.charAt(0) == input.value.toUpperCase());
                 for (i = 0; i < resFiltered.length; i++) {
                     let box = document.createElement('div');
                     box.classList.add('col-3');
@@ -83,12 +88,4 @@ async function afficher() {
     }
 
 
-}
-
-
-function capitalizeFirstLetter(input) {
-    if (input.length = 1) { return input.toUpperCase(); }
-    else {
-        return input.charAt(0).toUpperCase() + input.substring(1).toLowerCase();
-    }
 }
